@@ -14,6 +14,7 @@ namespace QLSV
         [STAThread]
         static void Main()
         {
+            //ghagdandhdajhdad 
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
