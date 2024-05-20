@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace QLSV
+namespace QLSV_3layers
 {
     internal static class Program
     {
@@ -14,10 +14,9 @@ namespace QLSV
         [STAThread]
         static void Main()
         {
-            //ghagdandhdajhdad bgdđa
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new frmDSSV());
         }
     }
 }

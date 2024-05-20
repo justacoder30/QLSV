@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace QLSV
 {
-    public partial class Form1 : Form
+    public partial class frmSinhVien : Form
     {
-        public Form1()
+        public frmSinhVien(string msv)
         {
+            this.msv = msv;
             InitializeComponent();
+        }
+        private string msv;
+        private void frmSinhVien_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("Mã sinh viên nhận được: " + msv);
         }
     }
 }

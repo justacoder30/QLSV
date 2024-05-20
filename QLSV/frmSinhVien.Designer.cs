@@ -1,6 +1,6 @@
 ﻿namespace QLSV
 {
-    partial class Form1
+    partial class frmSinhVien
     {
         /// <summary>
         /// Required designer variable.
@@ -28,13 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // frmSinhVien
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.Name = "frmSinhVien";
+            this.Text = "frmSinhVien";
+            this.Load += new System.EventHandler(this.frmSinhVien_Load);
+            this.ResumeLayout(false);
+
         }
 
         #endregion
     }
 }
-
