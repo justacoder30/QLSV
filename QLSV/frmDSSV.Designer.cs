@@ -89,6 +89,7 @@
             this.btnThemMoi.TabIndex = 4;
             this.btnThemMoi.Text = "Thêm mới";
             this.btnThemMoi.UseVisualStyleBackColor = true;
+            this.btnThemMoi.Click += new System.EventHandler(this.btnThemMoi_Click);
             // 
             // frmDSSV
             // 

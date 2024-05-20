@@ -20,8 +20,15 @@ namespace QLSV_3layers
 
         private void frmDSSV_Load(object sender, EventArgs e)
         {
+            LoadDSSV();
+
+
+        }
+
+        private void LoadDSSV()
+        {
             //load danh sach sv
-            dgvSinhVien.DataSource = new Database().SelectData("EXEC SelectAllSinhVien", null);
+            dgvSinhVien.DataSource = new Database().SelectData("EXEC SelectAllSinhVien");
             //dat ten cot
             dgvSinhVien.Columns["masinhvien"].HeaderText = "Mã sinh viên";
 
@@ -32,9 +39,11 @@ namespace QLSV_3layers
             dgvSinhVien.Columns["diachi"].HeaderText = "Địa chỉ";
             dgvSinhVien.Columns["dienthoai"].HeaderText = "Điện thoại";
             dgvSinhVien.Columns["email"].HeaderText = "Email";
-
-
         }
+
+
+
+
 
         private void dgvSinhVien_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -46,8 +55,15 @@ namespace QLSV_3layers
                 //MessageBox.Show("Mã sinh viên: " + dgvSinhVien.Rows[e.RowIndex].Cells["masinhvien"].Value.ToString());
                 //truyền msv vào form sinh viên
                 new frmSinhVien(msv).ShowDialog();
-
+                //sau khi form SV đóng -> load ds SV
+                LoadDSSV();
             }
+        }
+
+        private void btnThemMoi_Click(object sender, EventArgs e)
+        {
+            new frmSinhVien(null).ShowDialog();//nếu thêm mới sv -> mã sv = null 
+            LoadDSSV();
         }
     }
 }

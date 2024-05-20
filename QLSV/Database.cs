@@ -27,7 +27,7 @@ namespace QLSV_3layers
                 MessageBox.Show("Connected failed:"+ex.Message);
             }
         }
-        public DataTable SelectData(string sql,List<CustomParameter> lstParameter)
+        public DataTable SelectData(string sql)
         {
             try
             {
@@ -49,5 +49,50 @@ namespace QLSV_3layers
             }
 
         }
+        public DataRow Select(string sql)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                dt=new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt.Rows[0];
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("Lỗi load thông tin chi tiết: " + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }
+        public int ExeCute(string sql,List<CustomParameter> lstPara)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach(var p in lstPara)
+                {
+                    cmd.Parameters.AddWithValue(p.key, p.value);
+                }
+                var rs = cmd.ExecuteNonQuery();
+
+                return (int)rs;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi thực thi câu lệnh: " + ex.Message);
+                return -100;
+            }
+            finally
+            {
+                conn.Close();
+            }
+        }    
     }
 }
