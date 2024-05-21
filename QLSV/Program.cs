@@ -8,6 +8,7 @@ namespace QLSV_3layers
 {
     internal static class Program
     {
+        //fack u
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
