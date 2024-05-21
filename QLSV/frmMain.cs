@@ -21,7 +21,7 @@ namespace QLSV_3layers
         {
             //điểm sinh viên 
             var db = new Database();
-            dgvData.DataSource = db.SelectData(null);
+            //dgvData.DataSource = db.SelectData(null);
         }
     }
 }

@@ -27,13 +27,20 @@ namespace QLSV_3layers
                 MessageBox.Show("Connected failed:"+ex.Message);
             }
         }
-        public DataTable SelectData(string sql)
+        public DataTable SelectData(string sql, List<CustomParameter> lstPara)
         {
             try
             {
                 conn.Open();
                 
                 cmd = new SqlCommand(sql, conn);//nd sql duoc truyen vao
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach(var para in  lstPara)
+                {
+                    cmd.Parameters.AddWithValue(para.key,para.value);
+                }
+
+
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;
@@ -69,6 +76,7 @@ namespace QLSV_3layers
                 conn.Close();
             }
         }
+        
         public int ExeCute(string sql,List<CustomParameter> lstPara)
         {
             try
