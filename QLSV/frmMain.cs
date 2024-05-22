@@ -85,12 +85,10 @@ namespace QLSV_3layers
             AddForm(f);
         }
 
-        private void lopHocToolStripMenuItem_Click_1(object sender, EventArgs e)
+        private void lopHocToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //điểm sinh viên 
-            var db = new Database();
-            dgvData.DataSource = db.SelectData(null);
+            frmDSLopHoc f = new frmDSLopHoc();
+            AddForm(f);
         }
-
     }
 }

@@ -38,8 +38,8 @@
             this.giaoVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lopHocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.dangKyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.pnlContent = new System.Windows.Forms.Panel();
             this.chamDiemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pnlContent = new System.Windows.Forms.Panel();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -116,13 +116,19 @@
             this.lopHocToolStripMenuItem.Name = "lopHocToolStripMenuItem";
             this.lopHocToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.lopHocToolStripMenuItem.Text = "Lớp Học";
-            this.lopHocToolStripMenuItem.Click += new System.EventHandler(this.lopHocToolStripMenuItem_Click_1);
+            this.lopHocToolStripMenuItem.Click += new System.EventHandler(this.lopHocToolStripMenuItem_Click);
             // 
             // dangKyToolStripMenuItem
             // 
             this.dangKyToolStripMenuItem.Name = "dangKyToolStripMenuItem";
             this.dangKyToolStripMenuItem.Size = new System.Drawing.Size(139, 24);
             this.dangKyToolStripMenuItem.Text = "Đăng ký môn học";
+            // 
+            // chamDiemToolStripMenuItem
+            // 
+            this.chamDiemToolStripMenuItem.Name = "chamDiemToolStripMenuItem";
+            this.chamDiemToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
+            this.chamDiemToolStripMenuItem.Text = "Chấm điểm";
             // 
             // pnlContent
             // 
@@ -132,12 +138,6 @@
             this.pnlContent.Name = "pnlContent";
             this.pnlContent.Size = new System.Drawing.Size(1172, 526);
             this.pnlContent.TabIndex = 1;
-            // 
-            // chamDiemToolStripMenuItem
-            // 
-            this.chamDiemToolStripMenuItem.Name = "chamDiemToolStripMenuItem";
-            this.chamDiemToolStripMenuItem.Size = new System.Drawing.Size(99, 24);
-            this.chamDiemToolStripMenuItem.Text = "Chấm điểm";
             // 
             // frmMain
             // 

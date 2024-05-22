@@ -98,5 +98,10 @@ namespace QLSV
         {
 
         }
+
+        private void cbbLoaiTK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

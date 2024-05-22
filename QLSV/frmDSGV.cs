@@ -21,7 +21,7 @@ namespace QLSV
 
         private void frmDSGV_Load(object sender, EventArgs e)
         {
-                loadDSGV();
+            loadDSGV();
         }
 
 
@@ -40,7 +40,7 @@ namespace QLSV
                 key = "@tukhoa",
                 value = tukhoa
             });
-            dgvGiaoVien.DataSource = new Database().SelectData(sql,lstPara);
+            dgvGiaoVien.DataSource = new Database().SelectData(sql, lstPara);
         }
 
         private void btnThemMoi_Click(object sender, EventArgs e)
@@ -61,15 +61,17 @@ namespace QLSV
 
         private void dgvGiaoVien_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if(e.RowIndex >= 0)
+            if (e.RowIndex >= 0)
             {
-                if(MessageBox.Show("Bạn chắc chắn muốn xóa giáo viên:" + dgvGiaoVien.Rows[e.RowIndex].Cells["hoten"].Value.ToString()+"?","Xác nhận xóa!!",MessageBoxButtons.YesNo,MessageBoxIcon.Question)== DialogResult.Yes)
+                if (e.ColumnIndex == dgvGiaoVien.Columns["btnXoa"].Index)
                 {
-                    if (e.ColumnIndex == dgvGiaoVien.Columns["btnXoa"].Index)
+                    if (MessageBox.Show("Bạn chắc chắn muốn xóa giáo viên:" + dgvGiaoVien.Rows[e.RowIndex].Cells["hoten"].Value.ToString() + "?", "Xác nhận xóa!!", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                     {
-                        var maGV = dgvGiaoVien.Rows[e.RowIndex].Cells["magiaovien"].Value.ToString();
-                        var sql = "deleteGV";
-                        List<CustomParameter> lstPara = new List<CustomParameter>()
+                        if (e.ColumnIndex == dgvGiaoVien.Columns["btnXoa"].Index)
+                        {
+                            var maGV = dgvGiaoVien.Rows[e.RowIndex].Cells["magiaovien"].Value.ToString();
+                            var sql = "deleteGV";
+                            List<CustomParameter> lstPara = new List<CustomParameter>()
                     {
                         new CustomParameter
                         {
@@ -77,15 +79,14 @@ namespace QLSV
                             value = maGV
                         }
                     };
-                        var result = new Database().ExeCute(sql, lstPara);
-                        if (result == 1)
-                        {
+                            new Database().ExeCute(sql, lstPara);
                             MessageBox.Show("Xóa giáo viên thành công!");
                             loadDSGV();
                         }
                     }
                 }
-                
+
+
             }
         }
     }

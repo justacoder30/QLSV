@@ -11,7 +11,7 @@ namespace QLSV_3layers
 {
     public class Database
     {
-        private string connetionString = @"Data Source=localhost\sqlexpress;Initial Catalog = QLSinhVien;User ID = Dung;Password =12345";
+        private string connetionString = @"Data Source=localhost\sqlexpress;Initial Catalog = QLSinhVien;User ID = Quang;Password =12345";
         private SqlConnection conn;
         private DataTable dt;
         private SqlCommand cmd;
@@ -32,6 +32,7 @@ namespace QLSV_3layers
             try
             {
                 conn.Open();
+
                 cmd = new SqlCommand(sql, conn);//nd sql duoc truyen vao
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
@@ -40,6 +41,32 @@ namespace QLSV_3layers
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi load dữ liệu" + ex.Message);
+                return null;
+            }
+            finally
+            {
+                conn.Close();
+            }
+
+        }
+        public DataTable SelectData(string sql,List<CustomParameter> lstPara)
+        {
+            try
+            {
+                conn.Open();
+                cmd = new SqlCommand(sql, conn);//nd sql duoc truyen vao
+                cmd.CommandType = CommandType.StoredProcedure;
+                foreach(var para in lstPara)
+                {
+                    cmd.Parameters.AddWithValue(para.key, para.value);
+                }
+                dt = new DataTable();
+                dt.Load(cmd.ExecuteReader());
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi load dữ liệu " + ex.Message);
                 return null;
             }
             finally
