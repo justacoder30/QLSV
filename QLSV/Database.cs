@@ -11,7 +11,12 @@ namespace QLSV_3layers
 {
     public class Database
     {
-        private string connetionString = @"Data Source=localhost\sqlexpress;Initial Catalog = QLSinhVien;User ID = Quang;Password =12345";
+        private string connetionString = @"
+                                        Data Source=localhost\sqlexpress;
+                                        Initial Catalog = QLSinhVien;
+                                        User ID = Quang;
+                                        Password =12345
+                                        ";
         private SqlConnection conn;
         private DataTable dt;
         private SqlCommand cmd;
