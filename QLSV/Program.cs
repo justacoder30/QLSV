@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -17,7 +18,7 @@ namespace QLSV_3layers
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new frmDSSV());
+            Application.Run(new frmMain());
         }
     }
 }

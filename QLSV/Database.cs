@@ -11,7 +11,7 @@ namespace QLSV_3layers
 {
     public class Database
     {
-        private string connetionString = @"Data Source=127.0.0.1;Initial Catalog=QLSinhVien;User ID = sa;Password =17052016";
+        private string connetionString = @"Data Source=localhost\sqlexpress;Initial Catalog = QLSinhVien;User ID = Dung;Password =12345";
         private SqlConnection conn;
         private DataTable dt;
         private SqlCommand cmd;
@@ -27,20 +27,12 @@ namespace QLSV_3layers
                 MessageBox.Show("Connected failed:"+ex.Message);
             }
         }
-        public DataTable SelectData(string sql, List<CustomParameter> lstPara)
+        public DataTable SelectData(string sql)
         {
             try
             {
                 conn.Open();
-                
                 cmd = new SqlCommand(sql, conn);//nd sql duoc truyen vao
-                cmd.CommandType = CommandType.StoredProcedure;
-                foreach(var para in  lstPara)
-                {
-                    cmd.Parameters.AddWithValue(para.key,para.value);
-                }
-
-
                 dt = new DataTable();
                 dt.Load(cmd.ExecuteReader());
                 return dt;

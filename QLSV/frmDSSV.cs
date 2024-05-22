@@ -11,8 +11,10 @@ using System.Windows.Forms;
 
 namespace QLSV_3layers
 {
+
     public partial class frmDSSV : Form
     {
+        private string tukhoa = "";
         public frmDSSV()
         {
             InitializeComponent();
@@ -28,16 +30,7 @@ namespace QLSV_3layers
         private void LoadDSSV()
         {
             //load danh sach sv
-
-
-            //khai bao list
-            List<CustomParameter> lstPara = new List<CustomParameter> ();
-            lstPara.Add(new CustomParameter()
-            {
-                key = "@tukhoa",
-                value = tukhoa
-            });
-            dgvSinhVien.DataSource = new Database().SelectData("SelectAllSinhVien", lstPara);
+            dgvSinhVien.DataSource = new Database().SelectData("EXEC SelectAllSinhVien");
             //dat ten cot
             dgvSinhVien.Columns["masinhvien"].HeaderText = "Mã sinh viên";
 
@@ -72,13 +65,6 @@ namespace QLSV_3layers
         private void btnThemMoi_Click(object sender, EventArgs e)
         {
             new frmSinhVien(null).ShowDialog();//nếu thêm mới sv -> mã sv = null 
-            LoadDSSV();
-        }
-
-        private void btnTimKiem_Click(object sender, EventArgs e)
-        {
-
-            tukhoa = txtTuKhoa.Text;
             LoadDSSV();
         }
     }

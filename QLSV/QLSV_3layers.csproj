@@ -48,11 +48,53 @@
   <ItemGroup>
     <Compile Include="CustomParameter.cs" />
     <Compile Include="Database.cs" />
+    <Compile Include="frmDangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDangNhap.Designer.cs">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSDiemThi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSDiemThi.Designer.cs">
+      <DependentUpon>frmDSDiemThi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSGV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSGV.Designer.cs">
+      <DependentUpon>frmDSGV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSLopHoc.Designer.cs">
+      <DependentUpon>frmDSLopHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDSMH.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDSMH.Designer.cs">
+      <DependentUpon>frmDSMH.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmDSSV.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmDSSV.Designer.cs">
       <DependentUpon>frmDSSV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGiaoVien.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGiaoVien.Designer.cs">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmLopHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLopHoc.Designer.cs">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
     </Compile>
     <Compile Include="frmMain.cs">
       <SubType>Form</SubType>
@@ -66,16 +108,55 @@
     <Compile Include="frmSinhVien.Designer.cs">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMonHoc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMonHoc.Designer.cs">
+      <DependentUpon>frmMonHoc.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmWelcome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmWelcome.Designer.cs">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmDangNhap.resx">
+      <DependentUpon>frmDangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSDiemThi.resx">
+      <DependentUpon>frmDSDiemThi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSGV.resx">
+      <DependentUpon>frmDSGV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSLopHoc.resx">
+      <DependentUpon>frmDSLopHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDSMH.resx">
+      <DependentUpon>frmDSMH.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmDSSV.resx">
       <DependentUpon>frmDSSV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGiaoVien.resx">
+      <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLopHoc.resx">
+      <DependentUpon>frmLopHoc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmMain.resx">
       <DependentUpon>frmMain.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinhVien.resx">
       <DependentUpon>frmSinhVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmMonHoc.resx">
+      <DependentUpon>frmMonHoc.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmWelcome.resx">
+      <DependentUpon>frmWelcome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -85,6 +166,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Database\QLSinhVien.bak">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
@@ -104,6 +186,7 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
+    <None Include="Resources\planet9_Wallpaper_5000x2813.jpg" />
     <Content Include="SQL\QLSV_sql.sql">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
