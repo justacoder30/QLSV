@@ -26,34 +26,37 @@ namespace QLSV_3layers
             //sau khi form đăng nhập được tắt, lấy tài khoản đã đăng nhập
             taikhoan = fn.tendangnhap;
             loaitk = fn.loaiTK;
-            if (loaitk.Equals("admin"))
+            if(loaitk != null)
             {
-                //nếu là admin
-                //ẩn 2 menu chấm điểm và đăng ký
-                //chỉ để lại menu quản lý
-
-                chamDiemToolStripMenuItem.Visible = false;
-                dangKyToolStripMenuItem.Visible = false;
-            }
-            else
-            {//nếu ko phải admin thì ẩn menu quản lý
-                quanLyToolStripMenuItem.Visible = false;
-                if(loaitk.Equals("gv"))//nếu là giáo viên
+                if (loaitk.Equals("admin"))
                 {
-                    dangKyToolStripMenuItem.Visible = false;//ẩn đăng kí, cái này dành riêng cho sv
+                    //nếu là admin
+                    //ẩn 2 menu chấm điểm và đăng ký
+                    //chỉ để lại menu quản lý
 
-
-
-
-
+                    chamDiemToolStripMenuItem.Visible = false;
+                    dangKyToolStripMenuItem.Visible = false;
                 }
-                else//còn lại trường hợp sinh viên
-                {
-                    chamDiemToolStripMenuItem.Visible = false;//ẩn chấm điểm, chức năng của gv
+                else
+                {//nếu ko phải admin thì ẩn menu quản lý
+                    quanLyToolStripMenuItem.Visible = false;
+                    if (loaitk.Equals("gv"))//nếu là giáo viên
+                    {
+                        dangKyToolStripMenuItem.Visible = false;//ẩn đăng kí, cái này dành riêng cho sv
 
 
 
-                } 
+
+
+                    }
+                    else//còn lại trường hợp sinh viên
+                    {
+                        chamDiemToolStripMenuItem.Visible = false;//ẩn chấm điểm, chức năng của gv
+
+
+
+                    }
+                }
             }
             frmWelcome f = new frmWelcome();
             AddForm(f);
@@ -101,7 +104,8 @@ namespace QLSV_3layers
 
         private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            new frmDsMHDaDky(taikhoan).ShowDialog();
+            var f = new frmDsMHDaDky(taikhoan);
+            AddForm(f);
         }
     }
 }

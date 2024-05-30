@@ -1,4 +1,5 @@
-﻿using System;
+﻿using QLSV_3layers;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,6 +21,24 @@ namespace QLSV
         }
 
         private void frmDsMHDaDky_Load(object sender, EventArgs e)
+        {
+            LoadMonDky();
+        }
+
+        private void LoadMonDky()
+        {
+            List<CustomParameter> lst = new List<CustomParameter>()
+            {
+                new CustomParameter()
+                {
+                    key = "@masinhvien",
+                    value = masv,
+                }
+            };
+            dgvDSMHDky.DataSource = new Database().SelectData("monDaDKy", lst);
+        }
+
+        private void btnDKyMoi_Click(object sender, EventArgs e)
         {
 
         }
