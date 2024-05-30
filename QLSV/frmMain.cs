@@ -41,10 +41,18 @@ namespace QLSV_3layers
                 if(loaitk.Equals("gv"))//nếu là giáo viên
                 {
                     dangKyToolStripMenuItem.Visible = false;//ẩn đăng kí, cái này dành riêng cho sv
+
+
+
+
+
                 }
                 else//còn lại trường hợp sinh viên
                 {
                     chamDiemToolStripMenuItem.Visible = false;//ẩn chấm điểm, chức năng của gv
+
+
+
                 } 
             }
             frmWelcome f = new frmWelcome();
@@ -89,6 +97,11 @@ namespace QLSV_3layers
         {
             frmDSLopHoc f = new frmDSLopHoc();
             AddForm(f);
+        }
+
+        private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            new frmDsMHDaDky(taikhoan).ShowDialog();
         }
     }
 }
