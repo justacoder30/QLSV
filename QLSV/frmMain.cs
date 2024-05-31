@@ -34,7 +34,7 @@ namespace QLSV_3layers
                     //ẩn 2 menu chấm điểm và đăng ký
                     //chỉ để lại menu quản lý
 
-                    chamDiemToolStripMenuItem.Visible = false;
+                    quanLyLopToolStripMenuItem.Visible = false;
                     chucNangToolStripMenuItem.Visible = false;
                 }
                 else
@@ -51,7 +51,7 @@ namespace QLSV_3layers
                     }
                     else//còn lại trường hợp sinh viên
                     {
-                        chamDiemToolStripMenuItem.Visible = false;//ẩn chấm điểm, chức năng của gv
+                        quanLyLopToolStripMenuItem.Visible = false;//ẩn chấm điểm, chức năng của gv
 
 
 
@@ -111,6 +111,12 @@ namespace QLSV_3layers
         private void traCuuDiemToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var f = new frmKetQuaHocTap(taikhoan);
+            AddForm(f);
+        }
+
+        private void quanLyLopToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new frmQuanLyLop(taikhoan);
             AddForm(f);
         }
     }

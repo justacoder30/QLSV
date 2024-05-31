@@ -38,7 +38,7 @@
             this.giaoVienToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.lopHocToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.chucNangToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.chamDiemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.quanLyLopToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlContent = new System.Windows.Forms.Panel();
             this.dangKyToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.traCuuDiemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -52,7 +52,7 @@
             this.heThongToolStripMenuItem,
             this.quanLyToolStripMenuItem,
             this.chucNangToolStripMenuItem,
-            this.chamDiemToolStripMenuItem});
+            this.quanLyLopToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
@@ -129,13 +129,13 @@
             this.chucNangToolStripMenuItem.Name = "chucNangToolStripMenuItem";
             this.chucNangToolStripMenuItem.Size = new System.Drawing.Size(77, 20);
             this.chucNangToolStripMenuItem.Text = "Chức năng";
-            this.chucNangToolStripMenuItem.Click += new System.EventHandler(this.dangKyToolStripMenuItem_Click);
             // 
-            // chamDiemToolStripMenuItem
+            // quanLyLopToolStripMenuItem
             // 
-            this.chamDiemToolStripMenuItem.Name = "chamDiemToolStripMenuItem";
-            this.chamDiemToolStripMenuItem.Size = new System.Drawing.Size(81, 20);
-            this.chamDiemToolStripMenuItem.Text = "Chấm điểm";
+            this.quanLyLopToolStripMenuItem.Name = "quanLyLopToolStripMenuItem";
+            this.quanLyLopToolStripMenuItem.Size = new System.Drawing.Size(80, 20);
+            this.quanLyLopToolStripMenuItem.Text = "Quản lý lớp";
+            this.quanLyLopToolStripMenuItem.Click += new System.EventHandler(this.quanLyLopToolStripMenuItem_Click);
             // 
             // pnlContent
             // 
@@ -192,7 +192,7 @@
         private System.Windows.Forms.ToolStripMenuItem lopHocToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem chucNangToolStripMenuItem;
         private System.Windows.Forms.Panel pnlContent;
-        private System.Windows.Forms.ToolStripMenuItem chamDiemToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem quanLyLopToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dangKyToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem traCuuDiemToolStripMenuItem;
     }
