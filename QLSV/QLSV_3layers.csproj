@@ -102,6 +102,12 @@
     <Compile Include="frmGiaoVien.Designer.cs">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmKetQuaHocTap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKetQuaHocTap.Designer.cs">
+      <DependentUpon>frmKetQuaHocTap.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmLopHoc.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -160,6 +166,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmGiaoVien.resx">
       <DependentUpon>frmGiaoVien.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKetQuaHocTap.resx">
+      <DependentUpon>frmKetQuaHocTap.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmLopHoc.resx">
       <DependentUpon>frmLopHoc.cs</DependentUpon>

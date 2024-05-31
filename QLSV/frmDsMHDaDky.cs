@@ -40,7 +40,8 @@ namespace QLSV
 
         private void btnDKyMoi_Click(object sender, EventArgs e)
         {
-
+            new frmDangkyMonhoc(masv).ShowDialog();
+            LoadMonDky();
         }
     }
 }

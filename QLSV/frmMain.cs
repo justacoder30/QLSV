@@ -35,14 +35,14 @@ namespace QLSV_3layers
                     //chỉ để lại menu quản lý
 
                     chamDiemToolStripMenuItem.Visible = false;
-                    dangKyToolStripMenuItem.Visible = false;
+                    chucNangToolStripMenuItem.Visible = false;
                 }
                 else
                 {//nếu ko phải admin thì ẩn menu quản lý
                     quanLyToolStripMenuItem.Visible = false;
                     if (loaitk.Equals("gv"))//nếu là giáo viên
                     {
-                        dangKyToolStripMenuItem.Visible = false;//ẩn đăng kí, cái này dành riêng cho sv
+                        chucNangToolStripMenuItem.Visible = false;//ẩn đăng kí, cái này dành riêng cho sv
 
 
 
@@ -105,6 +105,12 @@ namespace QLSV_3layers
         private void dangKyToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var f = new frmDsMHDaDky(taikhoan);
+            AddForm(f);
+        }
+
+        private void traCuuDiemToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new frmKetQuaHocTap(taikhoan);
             AddForm(f);
         }
     }

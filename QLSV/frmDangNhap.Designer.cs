@@ -76,35 +76,35 @@
             "Giáo viên",
             "Sinh viên"});
             this.cbbLoaiTK.Location = new System.Drawing.Point(116, 36);
-            this.cbbLoaiTK.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.cbbLoaiTK.Margin = new System.Windows.Forms.Padding(2);
             this.cbbLoaiTK.Name = "cbbLoaiTK";
             this.cbbLoaiTK.Size = new System.Drawing.Size(141, 21);
-            this.cbbLoaiTK.TabIndex = 3;
+            this.cbbLoaiTK.TabIndex = 1;
             this.cbbLoaiTK.SelectedIndexChanged += new System.EventHandler(this.cbbLoaiTK_SelectedIndexChanged);
             // 
             // txtTenDN
             // 
             this.txtTenDN.Location = new System.Drawing.Point(116, 80);
-            this.txtTenDN.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtTenDN.Margin = new System.Windows.Forms.Padding(2);
             this.txtTenDN.Name = "txtTenDN";
             this.txtTenDN.Size = new System.Drawing.Size(141, 20);
-            this.txtTenDN.TabIndex = 4;
+            this.txtTenDN.TabIndex = 2;
             // 
             // txtMatKhau
             // 
             this.txtMatKhau.Location = new System.Drawing.Point(116, 124);
-            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtMatKhau.Margin = new System.Windows.Forms.Padding(2);
             this.txtMatKhau.Name = "txtMatKhau";
             this.txtMatKhau.Size = new System.Drawing.Size(141, 20);
-            this.txtMatKhau.TabIndex = 5;
+            this.txtMatKhau.TabIndex = 3;
             // 
             // btnDangNhap
             // 
             this.btnDangNhap.Location = new System.Drawing.Point(62, 180);
-            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDangNhap.Margin = new System.Windows.Forms.Padding(2);
             this.btnDangNhap.Name = "btnDangNhap";
             this.btnDangNhap.Size = new System.Drawing.Size(74, 29);
-            this.btnDangNhap.TabIndex = 6;
+            this.btnDangNhap.TabIndex = 4;
             this.btnDangNhap.Text = "Đăng nhập";
             this.btnDangNhap.UseVisualStyleBackColor = true;
             this.btnDangNhap.Click += new System.EventHandler(this.btnDangNhap_Click);
@@ -112,10 +112,10 @@
             // btnThoat
             // 
             this.btnThoat.Location = new System.Drawing.Point(154, 180);
-            this.btnThoat.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnThoat.Margin = new System.Windows.Forms.Padding(2);
             this.btnThoat.Name = "btnThoat";
             this.btnThoat.Size = new System.Drawing.Size(80, 29);
-            this.btnThoat.TabIndex = 7;
+            this.btnThoat.TabIndex = 5;
             this.btnThoat.Text = "Thoát";
             this.btnThoat.UseVisualStyleBackColor = true;
             this.btnThoat.Click += new System.EventHandler(this.btnThoat_Click);
@@ -133,7 +133,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "frmDangNhap";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "frmDangNhap";
